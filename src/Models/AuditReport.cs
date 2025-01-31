@@ -8,8 +8,14 @@ namespace SAFT_Reader.Models
     /// </summary>
     public class AuditReport
     {
-        public DateTime AuditDate { get; set; }
-        public List<AuditError> AuditErrorList { get; set; }
+        public DateTime AuditDate
+        {
+            get; set;
+        }
+        public List<AuditError> AuditErrorList
+        {
+            get; set;
+        }
     }
 
     /// <summary>
@@ -17,9 +23,18 @@ namespace SAFT_Reader.Models
     /// </summary>
     public class AuditError
     {
-        public string ErrorDescription { get; set; }
-        public string AuditElement { get; set; }
-        public AuditErrorType AuditErrorType { get; set; }
+        public string ErrorDescription
+        {
+            get; set;
+        }
+        public string AuditElement
+        {
+            get; set;
+        }
+        public AuditErrorType AuditErrorType
+        {
+            get; set;
+        }
     }
 
     /// <summary>

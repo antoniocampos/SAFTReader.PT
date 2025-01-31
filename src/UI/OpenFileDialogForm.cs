@@ -1,23 +1,23 @@
-﻿using System;
-using System.Windows.Forms;
-
-using Programatica.Saft.Models;
+﻿using Programatica.Saft.Models;
 
 using SAFT_Reader.Adapter;
 
 using Syncfusion.WinForms.Controls;
 
+using System;
+using System.Windows.Forms;
+
 namespace SAFT_Reader.UI
 {
-    public partial class OpenFileDialogForm : SfForm
+    public partial class OpenFileDialogForm :SfForm
     {
         /// <summary>
         /// Gets or sets the file path displayed in the txtFilePath TextBox.
         /// </summary>
         public string FilePath
         {
-            get { return txtFilePath.Text; }
-            set { txtFilePath.Text = value; }
+            get => txtFilePath.Text;
+            set => txtFilePath.Text = value;
         }
 
         private readonly IFileStreamAdapter _fileStreamAdapter;
@@ -106,12 +106,12 @@ namespace SAFT_Reader.UI
                 Globals.AuditFile = a;
 
                 var f = CompositionRoot.Resolve<MainForm>();
-                f.ShowDialog(this);
+                _ = f.ShowDialog(this);
                 Application.DoEvents();
             }
             catch (Exception)
             {
-                MessageBox.Show("Ocorreu um erro ao abrir o ficheiro Saft-PT. \n\r" +
+                _ = MessageBox.Show("Ocorreu um erro ao abrir o ficheiro Saft-PT. \n\r" +
                     "Garanta que se trata de um ficheiro válido, no formato 1.04_01 " +
                     "(Portaria n.º 302/2016, de 2 de dezembro)",
                     "Erro ao abrir ficheiro Saft-PT",

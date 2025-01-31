@@ -1,13 +1,13 @@
-﻿using System;
+﻿using Syncfusion.WinForms.Controls;
+using Syncfusion.WinForms.Core.Utils;
+
+using System;
 using System.Drawing;
 using System.Windows.Forms;
 
-using Syncfusion.WinForms.Controls;
-using Syncfusion.WinForms.Core.Utils;
-
 namespace SAFT_Reader.UI
 {
-    public partial class WaitingForm : SfForm
+    public partial class WaitingForm :SfForm
     {
         private readonly BusyIndicator busyIndicator = new BusyIndicator();
 

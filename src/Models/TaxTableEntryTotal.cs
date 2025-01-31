@@ -8,38 +8,65 @@ namespace SAFT_Reader.Models
     public class TaxTableEntryTotal
     {
         [Display(Name = "Cod. Imp.")]
-        public string TaxCode { get; set; }
+        public string TaxCode
+        {
+            get; set;
+        }
 
         [Display(Name = "Descrição")]
-        public string TaxDescription { get; set; }
+        public string TaxDescription
+        {
+            get; set;
+        }
 
         [Display(Name = "% Imposto")]
-        public float TaxPercentage { get; set; }
+        public float TaxPercentage
+        {
+            get; set;
+        }
 
         [Display(Name = "Base")]
         [DataType(DataType.Currency)]
-        public float DebitAmount { get; set; }
+        public float DebitAmount
+        {
+            get; set;
+        }
 
         [Display(Name = "Imp.")]
         [DataType(DataType.Currency)]
-        public float DebitTaxPayable { get; set; }
+        public float DebitTaxPayable
+        {
+            get; set;
+        }
 
         [Display(Name = "Total")]
         [DataType(DataType.Currency)]
-        public float TotalDebit { get; set; }
+        public float TotalDebit
+        {
+            get; set;
+        }
 
 
         [Display(Name = "Base")]
         [DataType(DataType.Currency)]
-        public float CreditAmount { get; set; }
+        public float CreditAmount
+        {
+            get; set;
+        }
 
         [Display(Name = "Imp.")]
         [DataType(DataType.Currency)]
-        public float CreditTaxPayable { get; set; }
+        public float CreditTaxPayable
+        {
+            get; set;
+        }
 
         [Display(Name = "Total")]
         [DataType(DataType.Currency)]
-        public float TotalCredit { get; set; }
+        public float TotalCredit
+        {
+            get; set;
+        }
 
     }
 }

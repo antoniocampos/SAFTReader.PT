@@ -1,11 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-
-using Programatica.Saft.Models;
+﻿using Programatica.Saft.Models;
 
 using SAFT_Reader.Adapter;
 using SAFT_Reader.Models;
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace SAFT_Reader.Services
 {
@@ -13,7 +13,7 @@ namespace SAFT_Reader.Services
     /// Represents an audit service for auditing operations.
     /// </summary>
 
-    public class AuditService : IAuditService
+    public class AuditService :IAuditService
     {
         private readonly AuditReport _auditReport;
 

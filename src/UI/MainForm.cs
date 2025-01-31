@@ -1,10 +1,4 @@
-﻿using System;
-using System.Diagnostics;
-using System.Drawing;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-
-using SAFT_Reader.Extensions;
+﻿using SAFT_Reader.Extensions;
 using SAFT_Reader.Models;
 
 using Syncfusion.Data;
@@ -16,11 +10,20 @@ using Syncfusion.WinForms.DataGrid;
 using Syncfusion.WinForms.DataGrid.Enums;
 using Syncfusion.WinForms.DataGridConverter;
 
+using System;
+using System.Diagnostics;
+using System.Drawing;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
 namespace SAFT_Reader.UI
 {
-    public partial class MainForm : RibbonForm
+    public partial class MainForm :RibbonForm
     {
-        public SfDataGrid SelectedGrid { get; set; }
+        public SfDataGrid SelectedGrid
+        {
+            get; set;
+        }
         private readonly WaitingForm _wf;
 
         /// <summary>
@@ -801,10 +804,7 @@ namespace SAFT_Reader.UI
         /// </remarks>
         private void SetWaitingMsg(string msg)
         {
-            if (_wf != null)
-            {
-                _wf.SetMsg(msg);
-            }
+            _wf?.SetMsg(msg);
         }
 
         #region Events
@@ -830,7 +830,8 @@ namespace SAFT_Reader.UI
             LoadAuditHeaderPropertyGrids();
             mainSplitter.Visible = true;
 
-            _wf.Close(); _wf.Dispose();
+            _wf.Close();
+            _wf.Dispose();
             Cursor.Current = Cursors.Default;
         }
 
@@ -951,31 +952,31 @@ namespace SAFT_Reader.UI
             switch (index)
             {
                 case 0:
-                    gridLines.Focus();
+                    _ = gridLines.Focus();
                     break;
 
                 case 1:
-                    gridDocuments.Focus();
+                    _ = gridDocuments.Focus();
                     break;
 
                 case 2:
-                    gridCustomers.Focus();
+                    _ = gridCustomers.Focus();
                     break;
 
                 case 3:
-                    gridProducts.Focus();
+                    _ = gridProducts.Focus();
                     break;
 
                 case 4:
-                    gridTax.Focus();
+                    _ = gridTax.Focus();
                     break;
 
                 case 5:
-                    gridAccounts.Focus();
+                    _ = gridAccounts.Focus();
                     break;
 
                 case 6:
-                    gridTransactions.Focus();
+                    _ = gridTransactions.Focus();
                     break;
 
                 default:
@@ -1007,7 +1008,7 @@ namespace SAFT_Reader.UI
                 url = "https://" + url;
             }
             var si = new ProcessStartInfo(url);
-            Process.Start(si);
+            _ = Process.Start(si);
             Cursor.Current = Cursors.Default;
         }
 
@@ -1061,7 +1062,7 @@ namespace SAFT_Reader.UI
             if (sfd.ShowDialog() == DialogResult.OK)
             {
                 workBook.SaveAs(sfd.FileName);
-                Process.Start(sfd.FileName);
+                _ = Process.Start(sfd.FileName);
             }
             Cursor.Current = Cursors.Default;
         }
@@ -1109,7 +1110,7 @@ namespace SAFT_Reader.UI
                 Break = PdfLayoutBreakType.FitPage
             };
 
-            PDFGrid.Draw(page, new PointF(), format);
+            _ = PDFGrid.Draw(page, new PointF(), format);
 
             SaveFileDialog sfd = new SaveFileDialog
             {
@@ -1120,7 +1121,7 @@ namespace SAFT_Reader.UI
             if (sfd.ShowDialog() == DialogResult.OK)
             {
                 document.Save(sfd.FileName);
-                Process.Start(sfd.FileName);
+                _ = Process.Start(sfd.FileName);
             }
             Cursor.Current = Cursors.Default;
         }
@@ -1158,7 +1159,7 @@ namespace SAFT_Reader.UI
         {
             Cursor.Current = Cursors.WaitCursor;
             var validator = $"{AppDomain.CurrentDomain.BaseDirectory}/validador_v1_04.jar";
-            Process.Start(validator);
+            _ = Process.Start(validator);
             Cursor.Current = Cursors.Default;
         }
 
@@ -1225,7 +1226,7 @@ namespace SAFT_Reader.UI
         {
             Cursor.Current = Cursors.WaitCursor;
             var f = CompositionRoot.Resolve<SplashForm>();
-            f.ShowDialog(this);
+            _ = f.ShowDialog(this);
             Cursor.Current = Cursors.Default;
         }
 
@@ -1253,7 +1254,7 @@ namespace SAFT_Reader.UI
                 url = "https://" + url;
             }
             var si = new ProcessStartInfo(url);
-            Process.Start(si);
+            _ = Process.Start(si);
             Cursor.Current = Cursors.Default;
         }
 

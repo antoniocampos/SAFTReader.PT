@@ -1,20 +1,23 @@
-﻿using System;
-using System.Data;
-using System.Linq;
-using System.Windows.Forms;
-
-using Programatica.Saft.Models;
+﻿using Programatica.Saft.Models;
 
 using SAFT_Reader.Services;
 
 using Syncfusion.WinForms.Controls;
 using Syncfusion.WinForms.DataGrid;
 
+using System;
+using System.Data;
+using System.Linq;
+using System.Windows.Forms;
+
 namespace SAFT_Reader.UI
 {
-    public partial class AttachedFilesFormDialog : SfForm
+    public partial class AttachedFilesFormDialog :SfForm
     {
-        public SfDataGrid DataGrid { get; set; }
+        public SfDataGrid DataGrid
+        {
+            get; set;
+        }
 
         private readonly IAuditService _auditService;
 
@@ -83,10 +86,13 @@ namespace SAFT_Reader.UI
             foreach (var file in Globals.AttachedFiles.Where(x => x.IsPrincipal == false))
             {
                 var i = listView1.Items.Add(file.FilePath);
-                i.SubItems.Add(file.AuditFile.Header.StartDate);
-                i.SubItems.Add(file.AuditFile.Header.EndDate);
+                _ = i.SubItems.Add(file.AuditFile.Header.StartDate);
+                _ = i.SubItems.Add(file.AuditFile.Header.EndDate);
             }
-            if (Globals.AttachedFiles.Count > 0) { cmdDelete.Enabled = true; }
+            if (Globals.AttachedFiles.Count > 0)
+            {
+                cmdDelete.Enabled = true;
+            }
         }
 
         /// <summary>
@@ -115,7 +121,7 @@ namespace SAFT_Reader.UI
                 }
                 else
                 {
-                    MessageBox.Show("Ocorreu um erro ao abrir o ficheiro Saft-PT. \n\r" +
+                    _ = MessageBox.Show("Ocorreu um erro ao abrir o ficheiro Saft-PT. \n\r" +
                         "Garanta que se trata de um ficheiro válido, no formato 1.04_01 " +
                         "e que corresponde à mesma empresa do ficheiro principal",
                         "Erro ao abrir ficheiro Saft-PT",
@@ -154,7 +160,7 @@ namespace SAFT_Reader.UI
             if (itemToRemove != null)
             {
                 var item = Globals.AttachedFiles.Where(x => x.FilePath.Equals(itemToRemove.Text)).FirstOrDefault();
-                Globals.AttachedFiles.Remove(item);
+                _ = Globals.AttachedFiles.Remove(item);
             }
             RefreshGridView();
             Cursor.Current = Cursors.Default;

@@ -1,14 +1,17 @@
-﻿using System;
+﻿using Syncfusion.WinForms.Controls;
+
+using System;
 using System.Drawing;
 using System.Windows.Forms;
 
-using Syncfusion.WinForms.Controls;
-
 namespace SAFT_Reader.UI
 {
-    public partial class SplashForm : SfForm
+    public partial class SplashForm :SfForm
     {
-        public bool IsSplash { get; set; }
+        public bool IsSplash
+        {
+            get; set;
+        }
 
         private int _counter;
 

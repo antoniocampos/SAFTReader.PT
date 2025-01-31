@@ -1,17 +1,20 @@
-﻿using System;
+﻿using Syncfusion.Data;
+using Syncfusion.WinForms.Controls;
+using Syncfusion.WinForms.DataGrid;
+
+using System;
 using System.Data;
 using System.Linq;
 using System.Windows.Forms;
 
-using Syncfusion.Data;
-using Syncfusion.WinForms.Controls;
-using Syncfusion.WinForms.DataGrid;
-
 namespace SAFT_Reader.UI
 {
-    public partial class TaxByProductFormDialog : SfForm
+    public partial class TaxByProductFormDialog :SfForm
     {
-        public SfDataGrid DataGrid { get; set; }
+        public SfDataGrid DataGrid
+        {
+            get; set;
+        }
 
         /// <summary>
         /// Initializes a new instance of the <see cref="TaxByProductFormDialog"/> class.

@@ -6,7 +6,7 @@ namespace SAFT_Reader.Adapter
     /// <summary>
     /// Adapter for reading and writing files using file streams.
     /// </summary>
-    public class FileStreamAdapter : IFileStreamAdapter
+    public class FileStreamAdapter :IFileStreamAdapter
     {
         /// <summary>
         /// Reads the content of a file located at the specified path.

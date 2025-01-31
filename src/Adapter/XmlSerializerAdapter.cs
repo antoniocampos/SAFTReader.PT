@@ -6,7 +6,7 @@ namespace SAFT_Reader.Adapter
     /// <summary>
     /// Adapter for converting XML data to objects and vice versa using XML serialization.
     /// </summary>
-    public class XmlSerializerAdapter : IXmlSerializerAdapter
+    public class XmlSerializerAdapter :IXmlSerializerAdapter
     {
         /// <summary>
         /// Converts XML data into an object of the specified type.

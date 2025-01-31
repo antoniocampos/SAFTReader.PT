@@ -1,14 +1,14 @@
-﻿using System;
+﻿using Programatica.Saft.Models;
+
+using SAFT_Reader.Extensions;
+using SAFT_Reader.Models;
+
+using System;
 using System.Collections.Generic;
 using System.Deployment.Application;
 using System.Linq;
 using System.Reflection;
 using System.Threading;
-
-using Programatica.Saft.Models;
-
-using SAFT_Reader.Extensions;
-using SAFT_Reader.Models;
 
 namespace SAFT_Reader
 {
@@ -17,8 +17,14 @@ namespace SAFT_Reader
     /// </summary>
     public static class Globals
     {
-        public static AuditFile AuditFile { get; set; }
-        public static List<AttachedFile> AttachedFiles { get; set; }
+        public static AuditFile AuditFile
+        {
+            get; set;
+        }
+        public static List<AttachedFile> AttachedFiles
+        {
+            get; set;
+        }
 
         public const string LightColumnColor = "#ebebe0";
         public const string DarkColumnColor = "#ccccb3";
@@ -110,11 +116,11 @@ namespace SAFT_Reader
                                 Description = c.Description,
                                 TaxPercentage = (c.TaxPercentage ?? "0.00").ToFloat(),
                                 TotalCreditAmmount = lines
-                                                        .Where(x => x.TaxCode == c.TaxCode && 
+                                                        .Where(x => x.TaxCode == c.TaxCode &&
                                                                     x.TaxPercentage == (c.TaxPercentage ?? "0.00").ToFloat())
                                                         .Sum(s => s.CreditAmount),
                                 TotalDebitAmmount = lines
-                                                        .Where(x => x.TaxCode == c.TaxCode && 
+                                                        .Where(x => x.TaxCode == c.TaxCode &&
                                                                     x.TaxPercentage == (c.TaxPercentage ?? "0.00").ToFloat())
                                                         .Sum(s => s.DebitAmount),
                             }).ToList();
@@ -396,9 +402,21 @@ namespace SAFT_Reader
     /// </summary>
     public class AttachedFile
     {
-        public Guid ID { get; set; }
-        public string FilePath { get; set; }
-        public AuditFile AuditFile { get; set; }
-        public bool IsPrincipal { get; set; }
+        public Guid ID
+        {
+            get; set;
+        }
+        public string FilePath
+        {
+            get; set;
+        }
+        public AuditFile AuditFile
+        {
+            get; set;
+        }
+        public bool IsPrincipal
+        {
+            get; set;
+        }
     }
 }

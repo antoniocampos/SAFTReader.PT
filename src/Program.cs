@@ -1,10 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Windows.Forms;
-
-using SAFT_Reader.UI;
+﻿using SAFT_Reader.UI;
 
 using Syncfusion.Licensing;
+
+using System;
+using System.Collections.Generic;
+using System.Windows.Forms;
 
 namespace SAFT_Reader
 {
@@ -35,7 +35,7 @@ namespace SAFT_Reader
             // Show a splash screen.
             var splash = CompositionRoot.Resolve<SplashForm>();
             splash.IsSplash = true;
-            splash.ShowDialog();
+            _ = splash.ShowDialog();
 
             // Initialize and run the main file dialog.
             var openFileDialog = CompositionRoot.Resolve<OpenFileDialogForm>();
