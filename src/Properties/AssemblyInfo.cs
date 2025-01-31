@@ -9,7 +9,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Programatica <www.saftreader.pt>")]
 [assembly: AssemblyProduct("SAFT_Reader")]
-[assembly: AssemblyCopyright("Copyright ©  Rui Ribeiro 2020")]
+[assembly: AssemblyCopyright("Copyright ©  Rui Ribeiro 2020 - 2025")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
@@ -31,5 +31,5 @@ using System.Runtime.InteropServices;
 // You can specify all the values or you can default the Build and Revision Numbers
 // by using the '*' as shown below:
 // [assembly: AssemblyVersion("1.0.*")]
-[assembly: AssemblyVersion("1.1.0.13")]
-[assembly: AssemblyFileVersion("1.1.0.13")]
+[assembly: AssemblyVersion("1.1.0.14")]
+[assembly: AssemblyFileVersion("1.1.0.14")]

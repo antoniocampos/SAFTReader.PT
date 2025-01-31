@@ -47,7 +47,7 @@ namespace SAFT_Reader.UI
         {
             _counter++;
 
-            if (_counter == 50)
+            if (_counter == 1)
             {
                 timer1.Stop();
                 this.Close();
