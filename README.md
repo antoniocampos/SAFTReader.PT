@@ -10,10 +10,10 @@ A informação de todas as tabelas pode ser agrupada, filtrada e ordenada por mu
 
 📢 Com o SaftReader é agora possível agregar vários SAFT relativos ao mesmo NIF. Visualize a informação de vários estabelecimentos ou de vários períodos da sua empresa.
 
-[![Download SAFT_READER](https://img.shields.io/badge/Download-SaftReader.zip-blue?style=for-the-badge)](https://github.com/ruialexrib/Programatica.SAFTReader/releases/latest/download/saftreader.zip)
+[![Download SAFT_READER](https://img.shields.io/badge/Download-SaftReader.zip-blue?style=for-the-badge)](https://github.com/antoniocampos/SAFTReader.PT/download/saftreader_2.0.0.1.zip)
 
 ### Principais Funcionalidades
 
-<img src="https://github.com/ruialexrib/Programatica.SAFTReader/blob/master/demos/Demo.gif?raw=true" width="800">
+<img src="https://github.com/antoniocampos/SAFTReader.PT/tree/master/demos/Demo.gif?raw=true" width="800">
 
 
