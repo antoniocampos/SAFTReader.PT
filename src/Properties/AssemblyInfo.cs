@@ -7,7 +7,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyTitle("SAFT_Reader")]
 [assembly: AssemblyDescription("O software SAFT READER permite visualizar, validar e analisar os dados do Ficheiro SAF-T PT, criado a partir de qualquer programa.")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("Programatica <www.saftreader.pt>")]
+[assembly: AssemblyCompany("Programatica")]
 [assembly: AssemblyProduct("SAFT_Reader")]
 [assembly: AssemblyCopyright("Copyright ©  Rui Ribeiro 2020 - 2025")]
 [assembly: AssemblyTrademark("")]
@@ -31,5 +31,5 @@ using System.Runtime.InteropServices;
 // You can specify all the values or you can default the Build and Revision Numbers
 // by using the '*' as shown below:
 // [assembly: AssemblyVersion("1.0.*")]
-[assembly: AssemblyVersion("1.1.0.14")]
-[assembly: AssemblyFileVersion("1.1.0.14")]
+[assembly: AssemblyVersion("1.1.0.15")]
+[assembly: AssemblyFileVersion("1.1.0.15")]
